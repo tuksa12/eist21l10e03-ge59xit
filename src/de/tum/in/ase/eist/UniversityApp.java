@@ -7,8 +7,11 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import org.apache.logging.log4j.*;
 
 public class UniversityApp extends Application {
+
+	private static final Logger LOGGER = LogManager.getLogger(UniversityApp.class);
 
 	private static final String TITLE = "University App";
 	private static final int SCENE_WIDTH = 300;
@@ -39,10 +42,11 @@ public class UniversityApp extends Application {
 
 	// TODO 1: Fix the returned String
 	public String getButtonText() {
-		return "Hello World";
+		return "EIST";
 	}
 
 	public static void startApp(String[] args) {
+		LOGGER.info("UniversityApp is starting");
 		// TODO 4: Log the start of the app at the info level
 
 		launch(args);
